@@ -42,7 +42,7 @@ header h1 {
 }
 
 header .hamburger {
-  border: 1px solid green;
+  border: 1px solid white;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -69,7 +69,7 @@ main .main-line {
   align-items: center;
   background-color: maroon;
   display: flex;
-  height: 40px;
+  height: 50px;
   justify-content: center;
   width: 100%;
 }
@@ -77,7 +77,7 @@ main .main-line {
 main .main-line h2 {
   color: #fec260;
   font-family: "Open Sans", sans-serif;
-  font-size: 11px;
+  font-size: 15px;
 }
 
 main .gallery {
@@ -108,43 +108,49 @@ main .gallery .img3 {
 
 main .section1,
 main .section2 {
-  display: grid;
-  grid-template-columns: repeat(3, 31%);
-  grid-template-rows: 100%;
-  height: 100px;
+  display: flex;
+  height: 150px;
+  margin-bottom: 4px;
+}
+
+main .section1 .img-container,
+main .section2 .img-container {
+  flex-basis: 50%;
+  height: 100%;
+  transition: transform 400ms;
+}
+
+main .section1 .details-container,
+main .section2 .details-container {
+  border-bottom: 2px solid maroon;
+  flex-basis: 50%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+main .section1 .details-container > *,
+main .section2 .details-container > * {
+  text-align: center;
+}
+
+main .section1 .details-container h2,
+main .section2 .details-container h2 {
+  color: maroon;
+  font-size: 10px;
 }
 
 main .section1 .img-container:hover {
   transform: rotateZ(20deg);
 }
 
+main .section2 {
+  flex-direction: row-reverse;
+}
+
 main .section2 .img-container:hover {
   transform: rotateZ(-20deg);
-}
-
-main div.img-container {
-  transition: transform 500ms;
-}
-
-main div.details-container {
-  align-items: center;
-  border-bottom: 2px solid maroon;
-  display: flex;
-  justify-content: center;
-}
-
-main div.details-container > * {
-  text-align: center;
-}
-
-main div.details-container h2 {
-  color: maroon;
-  font-size: 15px;
-}
-
-main div.details-container p {
-  align-items: flex-end;
-  color: #fec260;
-  font-size: 15px;
 }
 /*# sourceMappingURL=style.css.map */
