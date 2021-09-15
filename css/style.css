@@ -1,0 +1,150 @@
+@font-face {
+  font-family: "Rajdhani";
+  src: url("../fonts/Rajdhani-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Light.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 15px;
+}
+
+header {
+  background-color: maroon;
+  border: 1px solid red;
+  box-sizing: border-box;
+  color: #fec260;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: calc(100% - 80px) 60px;
+  height: 80px;
+  padding: 10px;
+}
+
+header h1 {
+  align-items: center;
+  display: flex;
+  font-size: 2.67rem;
+  font-family: "Rajdhani", serif;
+}
+
+header .hamburger {
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+header .hamburger div {
+  background-color: #fec260;
+  border-radius: 5px;
+  box-shadow: 0 0 2px black;
+  height: 8px;
+}
+
+main {
+  font-family: "Roboto", sans-serif;
+}
+
+main section img {
+  height: 100%;
+  width: 100%;
+}
+
+main .main-line {
+  align-items: center;
+  background-color: maroon;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  width: 100%;
+}
+
+main .main-line h2 {
+  color: #fec260;
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+}
+
+main .gallery {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 31%);
+  grid-template-rows: 100%;
+  height: 100px;
+  padding: 10px;
+}
+
+main .gallery div {
+  background-position: center;
+  background-size: cover;
+}
+
+main .gallery .img1 {
+  background-image: url("../img/img1.jpg");
+}
+
+main .gallery .img2 {
+  background-image: url("../img/img2.jpg");
+}
+
+main .gallery .img3 {
+  background-image: url("../img/img3.jpg");
+}
+
+main .section1,
+main .section2 {
+  display: grid;
+  grid-template-columns: repeat(3, 31%);
+  grid-template-rows: 100%;
+  height: 100px;
+}
+
+main .section1 .img-container:hover {
+  transform: rotateZ(20deg);
+}
+
+main .section2 .img-container:hover {
+  transform: rotateZ(-20deg);
+}
+
+main div.img-container {
+  transition: transform 500ms;
+}
+
+main div.details-container {
+  align-items: center;
+  border-bottom: 2px solid maroon;
+  display: flex;
+  justify-content: center;
+}
+
+main div.details-container > * {
+  text-align: center;
+}
+
+main div.details-container h2 {
+  color: maroon;
+  font-size: 15px;
+}
+
+main div.details-container p {
+  align-items: flex-end;
+  color: #fec260;
+  font-size: 15px;
+}
+/*# sourceMappingURL=style.css.map */
