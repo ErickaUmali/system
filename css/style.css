@@ -41,6 +41,10 @@ header h1 {
   font-family: "Rajdhani", serif;
 }
 
+header .nav-right {
+  display: none;
+}
+
 header .hamburger {
   border: 1px solid white;
   display: flex;
@@ -114,15 +118,8 @@ main .section2 {
   height: 400px;
 }
 
-main .section1 .img-container,
-main .section2 .img-container {
-  height: 100%;
-  width: 100%;
-}
-
 main .section1 .details-container,
 main .section2 .details-container {
-  height: 100%;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -157,7 +154,7 @@ main .line h3 {
 div.aside-container aside.article1, div.aside-container aside.article2 {
   display: grid;
   grid-template-rows: 50% 50%;
-  height: 350px;
+  height: 400px;
 }
 
 div.aside-container aside.article1 img, div.aside-container aside.article2 img {
@@ -165,12 +162,7 @@ div.aside-container aside.article1 img, div.aside-container aside.article2 img {
   width: 100%;
 }
 
-div.aside-container aside.article1 div.image-container, div.aside-container aside.article2 div.image-container {
-  height: 100%;
-}
-
 div.aside-container aside.article1 div.content, div.aside-container aside.article2 div.content {
-  height: 100%;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -180,7 +172,8 @@ div.aside-container aside.article1 div.content, div.aside-container aside.articl
 
 div.aside-container aside.article1 div.content p, div.aside-container aside.article2 div.content p {
   color: #7d1935;
-  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
 }
 
 div.aside-container aside.aside-line {
@@ -202,7 +195,7 @@ div.aside-container aside.main-line {
 
 div.aside-container aside.main-line h2 {
   color: #fec260;
-  font-size: 14px;
+  font-size: 13px;
   font-family: "Open Sans", sans-serif;
   text-align: center;
 }
@@ -221,7 +214,7 @@ section.act .republic {
 section.act .republic p {
   color: #7d1935;
   display: block;
-  font-size: 15px;
+  font-size: 14px;
   font-family: "Open Sans", serif;
   text-align: center;
   padding: 0 10px;
@@ -239,13 +232,13 @@ footer.footer-top {
 
 footer.footer-top h3 {
   color: #fec260;
-  font-size: 15px;
+  font-size: 14px;
   font-family: "Open Sans", serif;
 }
 
 footer.footer-main {
   background-color: #fec260;
-  height: 200px;
+  height: 230px;
   width: 100%;
 }
 
@@ -259,8 +252,9 @@ footer.footer-main ul {
 }
 
 footer.footer-main ul a {
-  border-right: 2px solid #7d1935;
   color: white;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
   text-decoration: none;
   text-align: center;
   padding: 5px;
@@ -268,5 +262,594 @@ footer.footer-main ul a {
 
 footer.footer-main ul a:hover {
   color: #7d1935;
+}
+
+footer.footer-main ul a:nth-child(2),
+footer.footer-main ul a:nth-child(5) {
+  border-right: 2px solid #7d1935;
+  border-left: 2px solid #7d1935;
+}
+
+footer.footer-main div.up {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 80px;
+  width: 100%;
+}
+
+footer.footer-main div.up p {
+  font-family: "Open Sans", serif;
+  font-size: 14px;
+}
+
+footer.footer-main div.down {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 50px;
+  text-align: center;
+}
+
+footer.footer-main div.down p {
+  font-family: "Open Sans", serif;
+  font-size: 14px;
+}
+
+footer.footer-main div.down p:nth-child(2) {
+  border-left: 2px solid #7d1935;
+}
+
+@media screen and (min-width: 400px) {
+  header h1 {
+    font-size: 3.12rem;
+  }
+  main .main-line h2 {
+    font-size: 16px;
+  }
+  main .gallery {
+    height: 150px;
+    padding-left: 20px;
+  }
+  main .section1,
+  main .section2 {
+    height: 600px;
+  }
+  main .section1 .details-container h2,
+  main .section2 .details-container h2 {
+    color: #7d1935;
+    font-size: 16px;
+    padding: 0 20px;
+  }
+  main .line {
+    height: 60px;
+  }
+  main .line h3 {
+    font-size: 16px;
+  }
+  div.aside-container aside.article1, div.aside-container aside.article2 {
+    height: 600px;
+  }
+  div.aside-container aside.aside-line {
+    height: 20px;
+  }
+  div.aside-container aside.main-line {
+    height: 60px;
+  }
+  div.aside-container aside.main-line h2 {
+    font-size: 16px;
+  }
+  footer.footer-top {
+    height: 60px;
+  }
+  footer.footer-top h3 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  header {
+    grid-template-columns: calc(100% - 100px) 80px;
+    height: 100px;
+  }
+  header h1 {
+    font-size: 3.5rem;
+  }
+  main .main-line h2 {
+    font-size: 18px;
+  }
+  main .gallery {
+    height: 180px;
+    padding-left: 20px;
+  }
+  main .section1 .details-container h2,
+  main .section2 .details-container h2 {
+    color: #7d1935;
+    font-size: 20px;
+    padding: 0 30px;
+  }
+  main .line {
+    height: 60px;
+  }
+  main .line h3 {
+    font-size: 18px;
+  }
+  div.aside-container aside.article1 div.content, div.aside-container aside.article2 div.content {
+    padding: 0 30px;
+  }
+  div.aside-container aside.article1 div.content p, div.aside-container aside.article2 div.content p {
+    color: #7d1935;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+  }
+  section.act {
+    height: 320px;
+    width: 100%;
+  }
+  section.act .republic {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  section.act .republic p {
+    font-size: 18px;
+    padding: 0 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  header h1 {
+    font-size: 3.8rem;
+  }
+  header .hamburger {
+    border: 2px solid white;
+    padding: 18;
+  }
+  header .hamburger div {
+    box-shadow: 0 0 3px black;
+    height: 8px;
+  }
+  main .gallery {
+    height: 190px;
+    padding-left: 30px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  header {
+    grid-template-columns: 30% 70%;
+    padding: 0;
+    gap: 0;
+  }
+  header h1 {
+    font-size: 2.45rem;
+    justify-self: center;
+  }
+  header .nav-right {
+    background-color: maroon;
+    display: block;
+    height: 100%;
+  }
+  header .nav-right ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 100%;
+    font-family: "Roboto", sans-serif;
+    height: 100%;
+  }
+  header .nav-right ul a {
+    align-items: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+  }
+  header .nav-right ul a:hover {
+    color: #fec260;
+  }
+  header .hamburger {
+    display: none;
+  }
+  main .section1,
+  main .section2 {
+    border-top: 2px solid #7d1935;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    height: 800px;
+  }
+  main .section1 .details-container h2,
+  main .section2 .details-container h2 {
+    font-size: 20px;
+  }
+  main .gallery {
+    height: 210px;
+    padding-left: 40px;
+  }
+  div.aside-container aside.article1, div.aside-container aside.article2 {
+    height: 800px;
+  }
+  div.aside-container aside.article1 div.content p, div.aside-container aside.article2 div.content p {
+    font-size: 20px;
+    padding: 0 40px;
+  }
+  section.act {
+    height: 320px;
+  }
+  section.act .republic {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 320px;
+  }
+  section.act .republic p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  header {
+    grid-template-columns: 30% 70%;
+    padding: 0;
+    gap: 0;
+  }
+  header h1 {
+    font-size: 2.91rem;
+    justify-self: center;
+  }
+  header .nav-right {
+    background-color: maroon;
+    display: block;
+    height: 100%;
+  }
+  header .nav-right ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 100%;
+    font-family: "Roboto", sans-serif;
+    height: 100%;
+  }
+  header .nav-right ul a {
+    align-items: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+  }
+  header .nav-right ul a:hover {
+    color: #fec260;
+  }
+  header .hamburger {
+    display: none;
+  }
+  main .main-line {
+    height: 80px;
+  }
+  main .main-line h2 {
+    font-size: 25px;
+  }
+  main .gallery {
+    height: 250px;
+    padding-left: 45px;
+  }
+  main .section1,
+  main .section2 {
+    height: 1000px;
+  }
+  main .section1 .details-container h2,
+  main .section2 .details-container h2 {
+    font-size: 30px;
+  }
+  main .line {
+    height: 80px;
+  }
+  main .line h3 {
+    font-size: 25px;
+  }
+  div.aside-container aside.article1, div.aside-container aside.article2 {
+    height: 1000px;
+  }
+  div.aside-container aside.article1 div.content, div.aside-container aside.article2 div.content {
+    padding: 0 40px;
+  }
+  div.aside-container aside.article1 div.content p, div.aside-container aside.article2 div.content p {
+    font-size: 28px;
+  }
+  div.aside-container aside.aside-line {
+    height: 30px;
+  }
+  div.aside-container aside.main-line {
+    height: 80px;
+  }
+  div.aside-container aside.main-line h2 {
+    font-size: 23px;
+  }
+  section.act {
+    height: 380px;
+  }
+  section.act .republic p {
+    font-size: 25px;
+    font-family: "Open Sans", serif;
+    padding: 0 40px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+  footer.footer-top {
+    height: 80px;
+  }
+  footer.footer-top h3 {
+    font-size: 25px;
+  }
+  footer.footer-main {
+    height: 280px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  header {
+    grid-template-columns: 30% 70%;
+    padding: 0;
+    gap: 0;
+  }
+  header h1 {
+    font-size: 56px;
+  }
+  header .nav-right {
+    background-color: maroon;
+    display: block;
+    height: 100%;
+  }
+  header .hamburger {
+    display: none;
+  }
+  main .main-line {
+    height: 80px;
+  }
+  main .main-line h2 {
+    font-size: 25px;
+  }
+  main .gallery {
+    height: 250px;
+    padding-left: 45px;
+  }
+  main .section1,
+  main .section2 {
+    height: 1000px;
+  }
+  main .section1 .details-container h2,
+  main .section2 .details-container h2 {
+    font-size: 30px;
+  }
+  main .line {
+    height: 80px;
+  }
+  main .line h3 {
+    font-size: 25px;
+  }
+  div.aside-container aside.article1, div.aside-container aside.article2 {
+    height: 1000px;
+  }
+  div.aside-container aside.article1 div.content, div.aside-container aside.article2 div.content {
+    padding: 0 40px;
+  }
+  div.aside-container aside.article1 div.content p, div.aside-container aside.article2 div.content p {
+    font-size: 28px;
+  }
+  div.aside-container aside.aside-line {
+    height: 30px;
+  }
+  div.aside-container aside.main-line {
+    height: 80px;
+  }
+  div.aside-container aside.main-line h2 {
+    font-size: 23px;
+  }
+  section.act {
+    height: 380px;
+  }
+  section.act .republic p {
+    font-size: 25px;
+    font-family: "Open Sans", serif;
+    padding: 0 40px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  main .gallery {
+    height: 320px;
+    padding-left: 65px;
+  }
+  main section.section1, main section.section2 {
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    margin-top: 30px;
+  }
+  main section.section1 .img-container:hover {
+    transform: rotateZ(20deg);
+  }
+  main section.section2 {
+    flex-direction: row-reverse;
+  }
+  main section.section2 .img-container:hover {
+    transform: rotateZ(-20deg);
+  }
+  main section div.img-container {
+    flex-basis: 40%;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 100px;
+    transition: transform 500ms;
+  }
+  main section div.details-container {
+    align-items: center;
+    border-bottom: 5px solid maroon;
+    display: flex;
+    flex-basis: 60%;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  main section div.details-container > * {
+    text-align: center;
+    width: 60%;
+  }
+  main section div.details-container h2 {
+    color: maroon;
+    font-size: 30px;
+  }
+  main section div.details-container p {
+    align-items: flex-end;
+    color: #fec260;
+    font-size: 30px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  div.aside-container aside.article1, div.aside-container aside.article2 {
+    display: flex;
+    height: 200px;
+    width: 100%;
+  }
+  div.aside-container aside.article1 img, div.aside-container aside.article2 img {
+    height: 100%;
+    width: 100%;
+  }
+  div.aside-container aside.article1 div.image-container, div.aside-container aside.article2 div.image-container {
+    height: 100%;
+    flex-basis: 40%;
+  }
+  div.aside-container aside.article1 div.content, div.aside-container aside.article2 div.content {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    flex-basis: 60%;
+  }
+  div.aside-container aside.article1 div.content p, div.aside-container aside.article2 div.content p {
+    color: maroon;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+  }
+  div.aside-container aside.aside-line {
+    background-color: maroon;
+    height: 10px;
+    width: 100%;
+  }
+  div.aside-container aside.article2 {
+    flex-direction: row-reverse;
+  }
+  .main-line {
+    align-items: center;
+    color: #fec260;
+    display: flex;
+    background-color: maroon;
+    font-family: "Open Sans", sans-serif;
+    height: 60px;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  main .gallery {
+    height: 380px;
+    padding-left: 85px;
+  }
+  main section.section1, main section.section2 {
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    margin-top: 30px;
+  }
+  main section.section1 .img-container:hover {
+    transform: rotateZ(20deg);
+  }
+  main section.section2 {
+    flex-direction: row-reverse;
+  }
+  main section.section2 .img-container:hover {
+    transform: rotateZ(-20deg);
+  }
+  main section div.img-container {
+    flex-basis: 40%;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 100px;
+    transition: transform 500ms;
+  }
+  main section div.details-container {
+    align-items: center;
+    border-bottom: 5px solid maroon;
+    display: flex;
+    flex-basis: 60%;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  main section div.details-container > * {
+    text-align: center;
+    width: 60%;
+  }
+  main section div.details-container h2 {
+    color: maroon;
+    font-size: 30px;
+  }
+  main section div.details-container p {
+    align-items: flex-end;
+    color: #fec260;
+    font-size: 30px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  div.aside-container aside.article1, div.aside-container aside.article2 {
+    display: flex;
+    height: 400px;
+    width: 100%;
+  }
+  div.aside-container aside.article1 img, div.aside-container aside.article2 img {
+    height: 100%;
+    width: 100%;
+  }
+  div.aside-container aside.article1 div.image-container, div.aside-container aside.article2 div.image-container {
+    height: 100%;
+    flex-basis: 40%;
+  }
+  div.aside-container aside.article1 div.content, div.aside-container aside.article2 div.content {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    flex-basis: 60%;
+  }
+  div.aside-container aside.article1 div.content p, div.aside-container aside.article2 div.content p {
+    color: maroon;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+  }
+  div.aside-container aside.aside-line {
+    background-color: maroon;
+    height: 10px;
+    width: 100%;
+  }
+  div.aside-container aside.article2 {
+    flex-direction: row-reverse;
+  }
+  .main-line {
+    align-items: center;
+    color: #fec260;
+    display: flex;
+    background-color: maroon;
+    font-family: "Open Sans", sans-serif;
+    height: 60px;
+    text-align: center;
+    justify-content: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */
