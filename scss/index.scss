@@ -496,7 +496,7 @@ footer {
         }
 
         .nav-right {
-            background-color: maroon;
+            background-color: #7d1935;
             display: block;
             height: 100%;
 
@@ -591,7 +591,7 @@ footer {
         }
 
         .nav-right {
-            background-color: maroon;
+            background-color: #7d1935;
             display: block;
             height: 100%;
 
@@ -726,7 +726,7 @@ footer {
         }
 
         .nav-right {
-            background-color: maroon;
+            background-color: #7d1935;
             display: block;
             height: 100%;
         }
@@ -853,7 +853,7 @@ footer {
 
             div {
                 &.img-container {
-                    flex-basis: 40%;
+                    flex-basis: 60%;
                     margin-right: 30px;
                     margin-left: 30px;
                     margin-bottom: 100px;
@@ -862,9 +862,9 @@ footer {
 
                 &.details-container {
                     align-items: center;
-                    border-bottom: 5px solid maroon;
+                    border-bottom: 5px solid #7d1935;
                     display: flex;
-                    flex-basis: 60%;
+                    flex-basis: 40%;
                     flex-direction: column;
                     justify-content: center;
                     margin-bottom: 30px;
@@ -875,7 +875,6 @@ footer {
                     }
 
                     h2 {
-                        color: maroon;
                         font-size: 30px;
                     }
                     p {
@@ -896,64 +895,49 @@ footer {
             &.article1,
             &.article2 {
                 display: flex;
-                height: 200px;
-                width: 100%;
-
-                img {
-                    height: 100%;
-                    width: 100%;
-                }
+                height: 600px;
 
                 div {
                     &.image-container {
-                        height: 100%;
-                        flex-basis: 40%;
+                        flex-basis: 60%;
                     }
 
                     &.content {
-                        align-items: center;
-                        display: flex;
-                        height: 100%;
-                        justify-content: center;
-                        flex-basis: 60%;
+                        flex-basis: 40%;
 
                         p {
-                            color: maroon;
                             font-size: 30px;
-                            line-height: 45px;
-                            text-align: center;
                         }
                     }
                 }
             }
-
-            &.aside-line {
-                background-color: maroon;
-                height: 10px;
-                width: 100%;
-            }
-
-            &.article2 {
-                flex-direction: row-reverse;
-            }
         }
     }
 
-    .main-line {
-        align-items: center;
-        color: #fec260;
-        display: flex;
-        background-color: maroon;
-        font-family: "Open Sans", sans-serif;
-        height: 60px;
-        text-align: center;
-        justify-content: center;
+    footer {
+        &.footer-main {
+            ul {
+                a {
+                    font-size: 20px;
+                }
+            }
+
+            div {
+                &.up {
+                    p {
+                        font-size: 22px;
+                    }
+                }
+                &.down {
+                    p {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
     }
 }
 @media screen and (min-width: 1500px) {
-    header {
-        background-color: #7d1935;
-    }
     main {
         .gallery {
             height: 380px;
@@ -997,7 +981,7 @@ footer {
 
                 &.details-container {
                     align-items: center;
-                    border-bottom: 5px solid maroon;
+                    border-bottom: 5px solid #7d1935;
                     display: flex;
                     flex-basis: 60%;
                     flex-direction: column;
@@ -1010,7 +994,7 @@ footer {
                     }
 
                     h2 {
-                        color: maroon;
+                        color: #7d1935;
                         font-size: 30px;
                     }
                     p {
@@ -1053,7 +1037,7 @@ footer {
                         flex-basis: 60%;
 
                         p {
-                            color: maroon;
+                            color: #7d1935;
                             font-size: 30px;
                             line-height: 45px;
                             text-align: center;
@@ -1063,7 +1047,7 @@ footer {
             }
 
             &.aside-line {
-                background-color: maroon;
+                background-color: #7d1935;
                 height: 10px;
                 width: 100%;
             }
@@ -1078,7 +1062,7 @@ footer {
         align-items: center;
         color: #fec260;
         display: flex;
-        background-color: maroon;
+        background-color: #7d1935;
         font-family: "Open Sans", sans-serif;
         height: 60px;
         text-align: center;
