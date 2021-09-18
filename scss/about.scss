@@ -365,6 +365,10 @@ footer {
     }
 }
 @media screen and (min-width: 1200px) {
+    h1 {
+        font-size: 55px;
+        justify-self: center;
+    }
     main {
         section {
             display: grid;
@@ -399,6 +403,22 @@ footer {
             display: block;
             transition: transform 0.4s; /* smoother zoom */
             height: 400px;
+        }
+    }
+}
+@media screen and (min-width: 1400px) {
+    header {
+        h1 {
+            font-size: 50px;
+            justify-self: center;
+        }
+    }
+}
+@media screen and (min-width: 1500px) {
+    header {
+        h1 {
+            font-size: 55px;
+            justify-self: center;
         }
     }
 }
