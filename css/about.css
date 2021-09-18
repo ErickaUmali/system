@@ -91,14 +91,14 @@ main.main-line {
   margin-top: 20px;
 }
 
+main section.image-container img {
+  height: 100%;
+  width: 100%;
+}
+
 section {
   border: 2px solid #fec260;
   margin: 20px;
-}
-
-section.image-container img {
-  height: 100%;
-  width: 100%;
 }
 
 section#gallery {
@@ -205,5 +205,157 @@ footer.footer-main div.down p {
 
 footer.footer-main div.down p:nth-child(2) {
   border-left: 2px solid #7d1935;
+}
+
+@media screen and (min-width: 400px) {
+  section#gallery h2 {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  header {
+    grid-template-columns: calc(100% - 100px) 80px;
+  }
+  header h1 {
+    font-size: 52px;
+  }
+  main div.about {
+    margin-top: 10px;
+  }
+  main div.about h2 {
+    font-size: 25px;
+    padding: 0 20px;
+  }
+  main.main-line {
+    background-color: #7d1935;
+    height: 60px;
+    margin-top: 0;
+  }
+  section#gallery h2 {
+    font-size: 20px;
+  }
+  footer.footer-top {
+    height: 60px;
+  }
+  footer.footer-top h3 {
+    font-size: 19px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  header {
+    background-color: #7d1935;
+    grid-template-columns: 30% 70%;
+    padding: 0;
+    gap: 0;
+  }
+  header h1 {
+    font-size: 45px;
+    justify-self: center;
+  }
+  header .nav-right {
+    background-color: #7d1935;
+    display: block;
+    height: 100%;
+  }
+  header .nav-right ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 100%;
+    font-family: "Roboto", sans-serif;
+    height: 100%;
+  }
+  header .nav-right ul a {
+    align-items: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+  }
+  header .nav-right ul a:hover {
+    color: #fec260;
+  }
+  header .hamburger {
+    display: none;
+  }
+  main div.about h2 {
+    border-radius: 4em / 5em;
+    width: 100%;
+    font-size: 23px;
+    padding: 0 20px;
+    text-align: center;
+  }
+  main div.content p {
+    font-size: 19px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  main.main-line {
+    background-color: #7d1935;
+    height: 70px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  header {
+    height: 100px;
+  }
+  main div.about {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    height: 800px;
+  }
+  main div.about {
+    margin-bottom: 20px;
+  }
+  main div.content p {
+    font-size: 25px;
+    padding: 20px;
+  }
+  section {
+    margin: 20px;
+  }
+  section#gallery {
+    margin-top: 50px;
+  }
+  section#gallery h2 {
+    font-size: 23px;
+    padding: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main section.image-container {
+    display: none;
+  }
+  main section.image-container img {
+    height: 100%;
+    width: 100%;
+  }
+  section {
+    border: 2px solid #fec260;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section#gallery {
+    border: 3px solid black;
+  }
+  section#gallery h2 {
+    font-size: 25px;
+    padding: 20px;
+    height: 20px;
+  }
+  section#gallery img {
+    display: block;
+    transition: transform 0.4s;
+    /* smoother zoom */
+    height: 400px;
+  }
 }
 /*# sourceMappingURL=about.css.map */
