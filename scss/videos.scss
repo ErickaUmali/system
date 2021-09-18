@@ -1,0 +1,113 @@
+$mustard: #fec260;
+$maroon: #7d1935;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 15px;
+}
+
+header {
+    background-color: $maroon;
+    border: 1px solid black;
+    box-sizing: border-box;
+    color: $mustard;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: calc(100% - 80px) 60px;
+    height: 80px;
+    padding: 10px;
+
+    h1 {
+        align-items: center;
+        display: flex;
+        font-size: 2.67rem;
+        font-family: "Rajdhani", serif;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .hamburger {
+        background-color: $maroon;
+        border: 1px solid white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 10px;
+
+        div {
+            background-color: $mustard;
+            border-radius: 5px;
+            box-shadow: 0 0 3px black;
+            height: 8px;
+        }
+    }
+}
+main {
+    &.image-container {
+        height: 180px;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    &.main-line {
+        background-color: $maroon;
+        height: 20px;
+        width: 100%;
+    }
+    div {
+        align-items: center;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        margin: 15px;
+
+        h1 {
+            font-weight: 600;
+            font-size: 26px;
+            color: $maroon;
+        }
+    }
+}
+section {
+    margin: 10px;
+
+    &#gallery {
+        background-color: $mustard;
+        border: 3px solid black;
+        display: inline-block;
+        overflow: hidden; /* clip the excess when child gets bigger than parent */
+    }
+    &#gallery img {
+        display: block;
+        transition: transform 0.4s; /* smoother zoom */
+        height: 100%;
+        width: 100%;
+    }
+    &#gallery:hover img {
+        transform: scale(1.3);
+        transform-origin: 50% 50%;
+    }
+    div {
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+
+        a {
+            color: black;
+            background-color: whitesmoke;
+            border: 2px solid black;
+            text-decoration: none;
+            padding: 10px;
+        }
+        a:hover {
+            background-color: $maroon;
+        }
+    }
+}
