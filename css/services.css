@@ -1,0 +1,210 @@
+@font-face {
+  font-family: "Rajdhani";
+  src: url("../fonts/Rajdhani-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Light.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #7d1935;
+  border: 1px solid black;
+  box-sizing: border-box;
+  color: #fec260;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: calc(100% - 80px) 60px;
+  height: 80px;
+  padding: 10px;
+}
+
+header h1 {
+  align-items: center;
+  display: flex;
+  font-size: 2.67rem;
+  font-family: "Rajdhani", serif;
+}
+
+header .nav-right {
+  display: none;
+}
+
+header .hamburger {
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+header .hamburger div {
+  background-color: #fec260;
+  border-radius: 5px;
+  box-shadow: 0 0 3px black;
+  height: 8px;
+}
+
+main.image-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 260px;
+}
+
+main.image-container img {
+  height: 100%;
+  width: 100%;
+}
+
+main div.main-line {
+  background-color: #7d1935;
+  height: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main div.main-line h3 {
+  color: #fec260;
+  font-size: 18px;
+  font-family: "Roboto,serif";
+  text-align: center;
+}
+
+h3 {
+  color: black;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+section img {
+  height: 100%;
+  width: 100%;
+}
+
+section.content1, section.content2, section.content3, section.content4, section.content5, section.content6, section.content7, section.content8, section.content9, section.content10 {
+  align-items: center;
+  background-color: #e6d9d9;
+  display: grid;
+  height: 300px;
+  border: 2px solid black;
+  text-align: center;
+  justify-content: center;
+  font-family: "Open Sans";
+}
+
+section.content1 div, section.content2 div, section.content3 div, section.content4 div, section.content5 div, section.content6 div, section.content7 div, section.content8 div, section.content9 div, section.content10 div {
+  justify-self: center;
+}
+
+section.content1 div.image, section.content2 div.image, section.content3 div.image, section.content4 div.image, section.content5 div.image, section.content6 div.image, section.content7 div.image, section.content8 div.image, section.content9 div.image, section.content10 div.image {
+  height: 100px;
+  width: 100px;
+}
+
+section.content1 div.service h4, section.content2 div.service h4, section.content3 div.service h4, section.content4 div.service h4, section.content5 div.service h4, section.content6 div.service h4, section.content7 div.service h4, section.content8 div.service h4, section.content9 div.service h4, section.content10 div.service h4 {
+  color: #7d1935;
+  text-align: center;
+  font-size: large;
+}
+
+section.content1 div p, section.content2 div p, section.content3 div p, section.content4 div p, section.content5 div p, section.content6 div p, section.content7 div p, section.content8 div p, section.content9 div p, section.content10 div p {
+  text-align: center;
+  padding: 0 20px;
+}
+
+footer.footer-top {
+  align-items: center;
+  background-color: #7d1935;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+}
+
+footer.footer-top h3 {
+  color: #fec260;
+  font-size: 14px;
+  font-family: "Open Sans", serif;
+}
+
+footer.footer-main {
+  background-color: #fec260;
+  height: 230px;
+  width: 100%;
+}
+
+footer.footer-main ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5px;
+  margin: 0 20px;
+  padding-top: 5px;
+}
+
+footer.footer-main ul a {
+  color: white;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+}
+
+footer.footer-main ul a:hover {
+  color: #7d1935;
+}
+
+footer.footer-main ul a:nth-child(2),
+footer.footer-main ul a:nth-child(5) {
+  border-right: 2px solid #7d1935;
+  border-left: 2px solid #7d1935;
+}
+
+footer.footer-main div.up {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 80px;
+  width: 100%;
+}
+
+footer.footer-main div.up p {
+  font-family: "Open Sans", serif;
+  font-size: 14px;
+}
+
+footer.footer-main div.down {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 50px;
+  text-align: center;
+}
+
+footer.footer-main div.down p {
+  font-family: "Open Sans", serif;
+  font-size: 14px;
+}
+
+footer.footer-main div.down p:nth-child(2) {
+  border-left: 2px solid #7d1935;
+}
+/*# sourceMappingURL=services.css.map */

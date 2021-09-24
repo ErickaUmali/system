@@ -1,0 +1,224 @@
+$mustard: #fec260;
+$maroon: #7d1935;
+
+@font-face {
+    font-family: "Rajdhani";
+    src: url("../fonts/Rajdhani-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Light.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #7d1935;
+    border: 1px solid black;
+    box-sizing: border-box;
+    color: $mustard;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: calc(100% - 80px) 60px;
+    height: 80px;
+    padding: 10px;
+
+    h1 {
+        align-items: center;
+        display: flex;
+        font-size: 2.67rem;
+        font-family: "Rajdhani", serif;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .hamburger {
+        border: 1px solid white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 10px;
+
+        div {
+            background-color: $mustard;
+            border-radius: 5px;
+            box-shadow: 0 0 3px black;
+            height: 8px;
+        }
+    }
+}
+main {
+    // height: 400px;
+
+    &.image-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 260px;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    div {
+        &.main-line {
+            background-color: $maroon;
+            height: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h3 {
+                color: $mustard;
+                font-size: 18px;
+                font-family: "Roboto,serif";
+                text-align: center;
+            }
+        }
+    }
+}
+
+h3 {
+    color: black;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+section {
+    margin-bottom: 20px;
+    img {
+        height: 100%;
+        width: 100%;
+    }
+
+    &.content1,
+    &.content2,
+    &.content3,
+    &.content4,
+    &.content5,
+    &.content6,
+    &.content7,
+    &.content8,
+    &.content9,
+    &.content10 {
+        align-items: center;
+        background-color: rgb(230, 217, 217);
+        display: grid;
+        height: 300px;
+        border: 2px solid black;
+        text-align: center;
+        justify-content: center;
+        font-family: "Open Sans";
+        div {
+            justify-self: center;
+            &.image {
+                height: 100px;
+                width: 100px;
+            }
+
+            &.service {
+                h4 {
+                    color: $maroon;
+                    text-align: center;
+                    font-size: large;
+                }
+            }
+            p {
+                text-align: center;
+                padding: 0 20px;
+            }
+        }
+    }
+}
+footer {
+    &.footer-top {
+        align-items: center;
+        background-color: #7d1935;
+        display: flex;
+        height: 50px;
+        justify-content: center;
+
+        h3 {
+            color: #fec260;
+            font-size: 14px;
+            font-family: "Open Sans", serif;
+        }
+    }
+
+    &.footer-main {
+        background-color: #fec260;
+        height: 230px;
+        width: 100%;
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 5px;
+            margin: 0 20px;
+            padding-top: 5px;
+
+            a {
+                color: white;
+                font-size: 14px;
+                font-family: "Open Sans", sans-serif;
+                text-decoration: none;
+                text-align: center;
+                padding: 5px;
+
+                &:hover {
+                    color: #7d1935;
+                }
+            }
+
+            a:nth-child(2),
+            a:nth-child(5) {
+                border-right: 2px solid #7d1935;
+                border-left: 2px solid #7d1935;
+            }
+        }
+
+        div {
+            &.up {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                height: 80px;
+                width: 100%;
+
+                p {
+                    font-family: "Open Sans", serif;
+                    font-size: 14px;
+                }
+            }
+
+            &.down {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                margin: 50px;
+                text-align: center;
+
+                p {
+                    font-family: "Open Sans", serif;
+                    font-size: 14px;
+                }
+
+                p:nth-child(2) {
+                    border-left: 2px solid #7d1935;
+                }
+            }
+        }
+    }
+}

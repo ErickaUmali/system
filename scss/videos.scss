@@ -1,6 +1,21 @@
 $mustard: #fec260;
 $maroon: #7d1935;
 
+@font-face {
+    font-family: "Rajdhani";
+    src: url("../fonts/Rajdhani-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Light.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -442,5 +457,42 @@ footer {
 @media screen and (min-width: 1500px) {
     header {
         height: 100px;
+    }
+
+    main {
+        &.image-container {
+            height: 800px;
+        }
+    }
+    footer {
+        &.footer-top {
+            height: 80px;
+
+            h3 {
+                font-size: 25px;
+            }
+        }
+
+        &.footer-main {
+            height: 280px;
+            ul {
+                a {
+                    font-size: 20px;
+                }
+            }
+
+            div {
+                &.up {
+                    p {
+                        font-size: 22px;
+                    }
+                }
+                &.down {
+                    p {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
     }
 }

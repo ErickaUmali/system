@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Rajdhani";
+  src: url("../fonts/Rajdhani-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Light.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -380,6 +395,24 @@ footer.footer-main div.down p:nth-child(2) {
   header h1 {
     font-size: 55px;
     justify-self: center;
+  }
+  footer.footer-top {
+    height: 80px;
+  }
+  footer.footer-top h3 {
+    font-size: 25px;
+  }
+  footer.footer-main {
+    height: 280px;
+  }
+  footer.footer-main ul a {
+    font-size: 20px;
+  }
+  footer.footer-main div.up p {
+    font-size: 22px;
+  }
+  footer.footer-main div.down p {
+    font-size: 22px;
   }
 }
 /*# sourceMappingURL=about.css.map */
