@@ -90,42 +90,73 @@ h3 {
   text-align: center;
 }
 
-section {
-  margin-bottom: 20px;
-}
-
 section img {
   height: 100%;
   width: 100%;
 }
 
-section.content1, section.content2, section.content3, section.content4, section.content5, section.content6, section.content7, section.content8, section.content9, section.content10 {
+section h3 {
+  border: 3px solid black;
+  color: #7d1935;
+  margin: 30px 0;
+  text-align: center;
+}
+
+section.content2, section.content4, section.content6, section.content8, section.content10 {
   align-items: center;
-  background-color: #e6d9d9;
   display: grid;
   height: 300px;
-  border: 2px solid black;
   text-align: center;
   justify-content: center;
   font-family: "Open Sans";
 }
 
-section.content1 div, section.content2 div, section.content3 div, section.content4 div, section.content5 div, section.content6 div, section.content7 div, section.content8 div, section.content9 div, section.content10 div {
+section.content2 div, section.content4 div, section.content6 div, section.content8 div, section.content10 div {
   justify-self: center;
 }
 
-section.content1 div.image, section.content2 div.image, section.content3 div.image, section.content4 div.image, section.content5 div.image, section.content6 div.image, section.content7 div.image, section.content8 div.image, section.content9 div.image, section.content10 div.image {
+section.content2 div.image, section.content4 div.image, section.content6 div.image, section.content8 div.image, section.content10 div.image {
   height: 100px;
   width: 100px;
 }
 
-section.content1 div.service h4, section.content2 div.service h4, section.content3 div.service h4, section.content4 div.service h4, section.content5 div.service h4, section.content6 div.service h4, section.content7 div.service h4, section.content8 div.service h4, section.content9 div.service h4, section.content10 div.service h4 {
+section.content2 div.service h4, section.content4 div.service h4, section.content6 div.service h4, section.content8 div.service h4, section.content10 div.service h4 {
   color: #7d1935;
   text-align: center;
   font-size: large;
 }
 
-section.content1 div p, section.content2 div p, section.content3 div p, section.content4 div p, section.content5 div p, section.content6 div p, section.content7 div p, section.content8 div p, section.content9 div p, section.content10 div p {
+section.content2 div p, section.content4 div p, section.content6 div p, section.content8 div p, section.content10 div p {
+  text-align: center;
+  padding: 0 20px;
+}
+
+section.content1, section.content3, section.content5, section.content7, section.content9 {
+  align-items: center;
+  background-color: #e6d9d9;
+  display: grid;
+  height: 300px;
+  text-align: center;
+  justify-content: center;
+  font-family: "Open Sans";
+}
+
+section.content1 div, section.content3 div, section.content5 div, section.content7 div, section.content9 div {
+  justify-self: center;
+}
+
+section.content1 div.image, section.content3 div.image, section.content5 div.image, section.content7 div.image, section.content9 div.image {
+  height: 100px;
+  width: 100px;
+}
+
+section.content1 div.service h4, section.content3 div.service h4, section.content5 div.service h4, section.content7 div.service h4, section.content9 div.service h4 {
+  color: #7d1935;
+  text-align: center;
+  font-size: large;
+}
+
+section.content1 div p, section.content3 div p, section.content5 div p, section.content7 div p, section.content9 div p {
   text-align: center;
   padding: 0 20px;
 }

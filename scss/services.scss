@@ -59,8 +59,6 @@ header {
     }
 }
 main {
-    // height: 400px;
-
     &.image-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -96,27 +94,59 @@ h3 {
     text-align: center;
 }
 section {
-    margin-bottom: 20px;
     img {
         height: 100%;
         width: 100%;
     }
 
-    &.content1,
+    h3 {
+        border: 3px solid black;
+        color: $maroon;
+        margin: 30px 0;
+        text-align: center;
+    }
+
     &.content2,
-    &.content3,
     &.content4,
-    &.content5,
     &.content6,
-    &.content7,
     &.content8,
-    &.content9,
     &.content10 {
+        align-items: center;
+        display: grid;
+        height: 300px;
+        text-align: center;
+        justify-content: center;
+        font-family: "Open Sans";
+        div {
+            justify-self: center;
+            &.image {
+                height: 100px;
+                width: 100px;
+            }
+
+            &.service {
+                h4 {
+                    color: $maroon;
+                    text-align: center;
+                    font-size: large;
+                }
+            }
+            p {
+                text-align: center;
+                padding: 0 20px;
+            }
+        }
+    }
+
+    &.content1,
+    &.content3,
+    &.content5,
+    &.content7,
+    &.content9 {
         align-items: center;
         background-color: rgb(230, 217, 217);
         display: grid;
         height: 300px;
-        border: 2px solid black;
         text-align: center;
         justify-content: center;
         font-family: "Open Sans";
