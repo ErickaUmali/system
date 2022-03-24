@@ -59,7 +59,7 @@ header .hamburger div {
 main.image-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 260px;
+  grid-template-rows: 270px;
 }
 
 main.image-container img {
@@ -102,63 +102,38 @@ section h3 {
   text-align: center;
 }
 
-section.content2, section.content4, section.content6, section.content8, section.content10 {
+section .content {
+  grid-template-rows: 130px 50px 120;
   align-items: center;
   display: grid;
-  height: 300px;
   text-align: center;
   justify-content: center;
   font-family: "Open Sans";
 }
 
-section.content2 div, section.content4 div, section.content6 div, section.content8 div, section.content10 div {
+section .content div {
   justify-self: center;
+  padding: 10px;
 }
 
-section.content2 div.image, section.content4 div.image, section.content6 div.image, section.content8 div.image, section.content10 div.image {
+section .content div.image {
   height: 100px;
   width: 100px;
 }
 
-section.content2 div.service h4, section.content4 div.service h4, section.content6 div.service h4, section.content8 div.service h4, section.content10 div.service h4 {
+section .content div.service h4 {
   color: #7d1935;
   text-align: center;
   font-size: large;
 }
 
-section.content2 div p, section.content4 div p, section.content6 div p, section.content8 div p, section.content10 div p {
+section .content div p {
   text-align: center;
   padding: 0 20px;
 }
 
-section.content1, section.content3, section.content5, section.content7, section.content9 {
-  align-items: center;
+section .content:nth-of-type(odd) {
   background-color: #e6d9d9;
-  display: grid;
-  height: 300px;
-  text-align: center;
-  justify-content: center;
-  font-family: "Open Sans";
-}
-
-section.content1 div, section.content3 div, section.content5 div, section.content7 div, section.content9 div {
-  justify-self: center;
-}
-
-section.content1 div.image, section.content3 div.image, section.content5 div.image, section.content7 div.image, section.content9 div.image {
-  height: 100px;
-  width: 100px;
-}
-
-section.content1 div.service h4, section.content3 div.service h4, section.content5 div.service h4, section.content7 div.service h4, section.content9 div.service h4 {
-  color: #7d1935;
-  text-align: center;
-  font-size: large;
-}
-
-section.content1 div p, section.content3 div p, section.content5 div p, section.content7 div p, section.content9 div p {
-  text-align: center;
-  padding: 0 20px;
 }
 
 footer.footer-top {
@@ -237,5 +212,147 @@ footer.footer-main div.down p {
 
 footer.footer-main div.down p:nth-child(2) {
   border-left: 2px solid #7d1935;
+}
+
+@media screen and (min-width: 400px) {
+  main.image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 290px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  main.image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 310px;
+  }
+  footer.footer-top h3 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  main.image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 340px;
+  }
+  footer.footer-top h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  header {
+    background-color: #7d1935;
+    grid-template-columns: 30% 70%;
+    padding: 0;
+    gap: 0;
+  }
+  header h1 {
+    font-size: 2.45rem;
+    justify-self: center;
+  }
+  header .nav-right {
+    background-color: #7d1935;
+    display: block;
+    height: 100%;
+  }
+  header .nav-right ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 100%;
+    font-family: "Roboto", sans-serif;
+    height: 100%;
+  }
+  header .nav-right ul a {
+    align-items: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+  }
+  header .nav-right ul a:hover {
+    color: #fec260;
+  }
+  header .hamburger {
+    display: none;
+  }
+  main.image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 400px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  main.image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 460px;
+  }
+  body > section {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50px 400px 400px 50px 400px 400px 400px;
+    grid-template-areas: "heading1 heading1" "content1 content2" "content3 content4" "heading2 heading2" "content5 content6" "content7 content8" "content9 content10";
+  }
+  body > section h3 {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  body > section h3:nth-of-type(1) {
+    grid-area: heading1;
+  }
+  body > section h3:nth-of-type(2) {
+    grid-area: heading2;
+  }
+  body > section .content:nth-of-type(1) {
+    grid-area: content1;
+  }
+  body > section .content:nth-of-type(2) {
+    grid-area: content2;
+  }
+  body > section .content:nth-of-type(3) {
+    grid-area: content3;
+  }
+  body > section .content:nth-of-type(4) {
+    grid-area: content4;
+  }
+  body > section .content:nth-of-type(5) {
+    grid-area: content5;
+  }
+  body > section .content:nth-of-type(6) {
+    grid-area: content6;
+  }
+  body > section .content:nth-of-type(7) {
+    grid-area: content7;
+  }
+  body > section .content:nth-of-type(8) {
+    grid-area: content8;
+  }
+  body > section .content:nth-of-type(9) {
+    grid-area: content9;
+  }
+  body > section .content:nth-of-type(10) {
+    grid-area: content10;
+  }
+  body > section footer.footer-main {
+    height: 260px;
+  }
+  body > section footer.footer-main ul a {
+    font-size: 18px;
+  }
+  body > section footer.footer-main div.up p {
+    font-size: 18px;
+  }
+  body > section footer.footer-main div.down p {
+    font-size: 18px;
+  }
 }
 /*# sourceMappingURL=services.css.map */

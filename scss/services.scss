@@ -62,7 +62,7 @@ main {
     &.image-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 260px;
+        grid-template-rows: 270px;
         img {
             height: 100%;
             width: 100%;
@@ -106,19 +106,16 @@ section {
         text-align: center;
     }
 
-    &.content2,
-    &.content4,
-    &.content6,
-    &.content8,
-    &.content10 {
+    .content {
+        grid-template-rows: 130px 50px 120;
         align-items: center;
         display: grid;
-        height: 300px;
         text-align: center;
         justify-content: center;
         font-family: "Open Sans";
         div {
             justify-self: center;
+            padding: 10px;
             &.image {
                 height: 100px;
                 width: 100px;
@@ -138,37 +135,8 @@ section {
         }
     }
 
-    &.content1,
-    &.content3,
-    &.content5,
-    &.content7,
-    &.content9 {
-        align-items: center;
+    .content:nth-of-type(odd) {
         background-color: rgb(230, 217, 217);
-        display: grid;
-        height: 300px;
-        text-align: center;
-        justify-content: center;
-        font-family: "Open Sans";
-        div {
-            justify-self: center;
-            &.image {
-                height: 100px;
-                width: 100px;
-            }
-
-            &.service {
-                h4 {
-                    color: $maroon;
-                    text-align: center;
-                    font-size: large;
-                }
-            }
-            p {
-                text-align: center;
-                padding: 0 20px;
-            }
-        }
     }
 }
 footer {
@@ -247,6 +215,201 @@ footer {
 
                 p:nth-child(2) {
                     border-left: 2px solid #7d1935;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 400px) {
+    main {
+        &.image-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 290px;
+        }
+    }
+}
+@media screen and (min-width: 500px) {
+    main {
+        &.image-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 310px;
+        }
+    }
+    footer {
+        &.footer-top {
+            h3 {
+                font-size: 18px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 600px) {
+    main {
+        &.image-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 340px;
+        }
+    }
+    footer {
+        &.footer-top {
+            h3 {
+                font-size: 20px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 700px) {
+    header {
+        background-color: #7d1935;
+        grid-template-columns: 30% 70%;
+        padding: 0;
+        gap: 0;
+
+        h1 {
+            font-size: 2.45rem;
+            justify-self: center;
+        }
+
+        .nav-right {
+            background-color: #7d1935;
+            display: block;
+            height: 100%;
+
+            ul {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: 100%;
+                font-family: "Roboto", sans-serif;
+                height: 100%;
+
+                a {
+                    align-items: center;
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: #fec260;
+                    }
+                }
+            }
+        }
+
+        .hamburger {
+            display: none;
+        }
+    }
+    main {
+        &.image-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 400px;
+        }
+    }
+}
+@media screen and (min-width: 800px) {
+    main {
+        &.image-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 460px;
+        }
+    }
+    body > section {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 50px 400px 400px 50px 400px 400px 400px;
+        grid-template-areas:
+            "heading1 heading1"
+            "content1 content2"
+            "content3 content4"
+            "heading2 heading2"
+            "content5 content6"
+            "content7 content8"
+            "content9 content10";
+
+        h3 {
+            display: flex;
+            margin: 0;
+            align-items: center;
+            justify-content: center;
+        }
+        // h3:nth-child(1) {
+        //     margin-top: 20px;
+        // }
+
+        h3:nth-of-type(1) {
+            grid-area: heading1;
+        }
+
+        h3:nth-of-type(2) {
+            grid-area: heading2;
+        }
+        .content {
+            &:nth-of-type(1) {
+                grid-area: content1;
+            }
+
+            &:nth-of-type(2) {
+                grid-area: content2;
+            }
+
+            &:nth-of-type(3) {
+                grid-area: content3;
+            }
+
+            &:nth-of-type(4) {
+                grid-area: content4;
+            }
+
+            &:nth-of-type(5) {
+                grid-area: content5;
+            }
+
+            &:nth-of-type(6) {
+                grid-area: content6;
+            }
+
+            &:nth-of-type(7) {
+                grid-area: content7;
+            }
+
+            &:nth-of-type(8) {
+                grid-area: content8;
+            }
+
+            &:nth-of-type(9) {
+                grid-area: content9;
+            }
+
+            &:nth-of-type(10) {
+                grid-area: content10;
+            }
+        }
+        footer {
+            &.footer-main {
+                height: 260px;
+                ul {
+                    a {
+                        font-size: 18px;
+                    }
+                }
+                div {
+                    &.up {
+                        p {
+                            font-size: 18px;
+                        }
+                    }
+                    &.down {
+                        p {
+                            font-size: 18px;
+                        }
+                    }
                 }
             }
         }
